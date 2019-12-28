@@ -1,0 +1,15 @@
+@import './components/styles/mixins';
+@import './components/styles/colors';
+
+body {
+  text-align: center;
+  color: $textColor;
+  height: 100%;
+  background: $bg-general;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+

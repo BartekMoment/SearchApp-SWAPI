@@ -1,0 +1,26 @@
+@import '../styles/colors';
+
+.personBox {
+    width: auto;
+    height: 20vh;
+    box-shadow: -3px 6px 10px 0px rgba(0, 0, 0, 0.48);
+    padding: 20px;
+    border-bottom: 3px solid $yellow;
+
+    p {
+        text-align: left;
+        
+        span {
+            font-size: .75em;
+            display: block;
+            color: $yellow;
+            font-weight: 700;
+        }
+    }
+}
+
+.gridBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}

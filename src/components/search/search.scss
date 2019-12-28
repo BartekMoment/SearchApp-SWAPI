@@ -1,0 +1,57 @@
+@import '../styles/mixins';
+@import '../styles/colors';
+
+.search {
+    @include breakpoint(mobileonly) {
+        width: 320px;
+        font-size: .8rem;
+    }
+    @include breakpoint(phablet) {
+        width: 720px;
+        font-size: .8rem;
+    }
+    @include breakpoint(laptop) {
+        width: 960px;
+        font-size: .9rem;
+    }
+    @include breakpoint(desktop) {
+        width: 1080px;
+        font-size: 1.1rem;
+	}
+}
+
+#logo {
+    width: 25%;
+}
+
+#search {
+    border: none;
+    background: #646464;
+    color: $textColor;
+    border-bottom: 1px solid $yellow;
+    padding: 15px 10px;
+    width: 55vh;
+    display: block;
+}
+
+.searchBox {
+    height: 20vh;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    border: 1px solid $yellow;
+    background: #505050;
+    -webkit-box-shadow: -3px 6px 10px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: -3px 6px 10px 0px rgba(0,0,0,0.48);
+    box-shadow: -3px 6px 10px 0px rgba(0,0,0,0.48);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 20px;
+    @include breakpoint(tablet) {
+	}
+}
