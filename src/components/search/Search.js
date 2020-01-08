@@ -38,17 +38,17 @@ const Search = () => {
     const setSearchQuery = (e => {
         setQuery(e.target.value)
     });
+
     
     
     return (
         <div className="search">
             <img src={Logo} id="logo" alt='Logo Star Wars' />
             <div className="searchBox">
-                <p>
-                Search {activeOptions}
-                </p>
                 <DebounceInput
                     id="search"
+                    type="search"
+                    placeholder={'Search ' + activeOptions}
                     minLength={2}
                     debounceTimeout={600}
                     value={query}
@@ -80,8 +80,11 @@ const Search = () => {
                     </Radio>
                     </form>
             </div>
-                <h3>Znaleziona liczba elementów: { data.length }</h3>
-                {loading ? <div>Ładowanie...</div> : <div className="results"><ItemBox list={data}/></div>}
+                <h3>Items found: { data.length }</h3>
+                {
+                    (query.length <= 2) ? null : (loading) ? <div>Ładowanie...</div> : <div className="results"><ItemBox list={data}/></div>
+                }
+                {/* {loading ? <div>Ładowanie...</div> : <div className="results"><ItemBox list={data}/></div>} */}
         </div>
     );
 }

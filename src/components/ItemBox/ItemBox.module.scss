@@ -1,11 +1,23 @@
 @import '../styles/colors';
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        top: 35px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .personBox {
     width: auto;
     height: 20vh;
     box-shadow: -3px 6px 10px 0px rgba(0, 0, 0, 0.48);
     padding: 20px;
     border-bottom: 3px solid $yellow;
+    animation: appear 1s ease;
 
     p {
         text-align: left;
